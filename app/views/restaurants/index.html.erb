@@ -1,0 +1,17 @@
+<h1>All restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <ul>
+    <li> <%= restaurant.name %> </li>
+    <li> <%= restaurant.address %> </li>
+    <li> <%= restaurant.phone_number %> </li>
+    <li> <%= restaurant.category %> </li>
+  </ul>
+<% end %>
+
+<!-- link to creating new restaurant -->
+<%= link_to 'New Restaurant', new_restaurant_path %>
+
+<!-- Path in terminal: rails routes tell me the path
+new_restaurant GET  /restaurants/new(.:format)  restaurants#new
+ -->
