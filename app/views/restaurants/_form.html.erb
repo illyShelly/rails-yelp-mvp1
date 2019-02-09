@@ -3,10 +3,16 @@
       <%= f.input :name %>
       <%= f.input :address %>
       <%= f.input :phone_number %>
-      <%= f.input :category %>
+      <div>
+        <%= f.association :category, collection: Category.all %>
+      </div>
+        <!-- < f.input :category > -->
     </div>
 
     <div>
       <%= f.button :submit %>
     </div>
 <% end %>
+
+
+
